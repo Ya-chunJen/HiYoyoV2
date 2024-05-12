@@ -1,0 +1,54 @@
+{
+    "assistant_info": {
+        "name": "renyajun",
+        "instructions": "你是任亚军的私人秘书。",
+        "model": "gpt-3.5-turbo",
+        "tools": [
+            {
+                "type": "file_search"
+            },
+            {
+                "type": "function",
+                "function": {
+                    "name": "save_content_to_file",
+                    "description": "可以将模型扮演的智能助手需要记忆的内容保存到文件中。",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "content": {
+                                "type": "string",
+                                "description": "需要记录、记忆、保存的内容。"
+                            }
+                        },
+                        "required": [
+                            "content"
+                        ]
+                    }
+                }
+            }
+        ],
+        "tool_resources": {
+            "file_search": {
+                "vector_store_ids": [
+                    "vs_K9ISrCryjH5oc12YEzj3XVLl"
+                ]
+            }
+        }
+    },
+    "assistant_md5": "96e443669ca84ab56a2b4260696f90e3",
+    "assistant_id": "asst_wPhL09BnXe2BCsRyVsS46FoK",
+    "attact_file_info": {
+        "file_paths": [
+            "/Users/renyajun/gitee/HiYoyoV2/agents/renyajun/infromation.txt",
+            "/Users/renyajun/gitee/HiYoyoV2/agents/renyajun/memory.txt"
+        ],
+        "file_md5s": [
+            "6d1603db85af2401c7e3f3eb483579e3",
+            "dec08bd7c093112ca4eac9608b95fcdd"
+        ],
+        "file_openai_ids": [
+            "file-NtiVd0EUj6SNTU6LcsTvDZi2",
+            "file-zZzWlGRVkJ1gWWc8zmisQAOg"
+        ]
+    }
+}

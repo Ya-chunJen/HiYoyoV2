@@ -1,0 +1,7 @@
+config.ini
+__pycache__/
+*.pyc
+*.pyo
+.vscode/
+venvv2/
+agents/renyajun/*.txt
