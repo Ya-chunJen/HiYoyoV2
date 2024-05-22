@@ -4,3 +4,7 @@ __pycache__/
 .vscode/
 venvv2/
 agents/*/*.txt
+company/*
+agents/azuretest/robot.json
+agents/wjxagent/data_detial.xlsx
+agents/wjxagent/robot.json

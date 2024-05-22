@@ -51,7 +51,7 @@ def format_assistant(robot_name):
     with open(robot_json_path, 'w', encoding='utf-8') as f:
         json.dump(robot, f, indent=4 ,ensure_ascii=False)
 
-# format_assistant("renyajun")
+format_assistant("azuretest")
 
 def update_assistant(robot_name):
     robot_dir = os.path.join(workdir,'agents', robot_name)
@@ -74,7 +74,8 @@ def update_assistant(robot_name):
     new_file_paths = []
     old_file_paths = robot['attact_file_info']['file_paths']
 
-    for file_path in glob.glob(os.path.join(robot_dir, "*.txt")):
+    #for file_path in glob.glob(os.path.join(robot_dir, "*.txt")):
+    for file_path in glob.glob(os.path.join(robot_dir, "*.txt")) + glob.glob(os.path.join(robot_dir, "*.xlsx")):
         new_file_paths.append(file_path)
     
     new_file_mad5s = []
@@ -121,4 +122,4 @@ def update_assistant(robot_name):
     with open(robot_json_path, 'w' , encoding='utf-8') as f:
         json.dump(robot, f, indent=4,ensure_ascii=False)
     
-# update_assistant("renyajun")
+# update_assistant("azuretest")

@@ -4,14 +4,21 @@ import hashlib
 import glob
 from openai import OpenAI
 import configparser
+from openai import AzureOpenAI
 
 # 读取配置文件
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-client = OpenAI(
-    api_key = config["Openai"]["api_key"],
-    base_url = config["Openai"]["base_url"]    
+# client = OpenAI(
+#     api_key = config["Openai"]["api_key"],
+#     base_url = config["Openai"]["base_url"]    
+# )
+
+client = AzureOpenAI(
+    api_key = config["Azureopenai-east-us2"]["api_key"],
+    api_version = config["Azureopenai-east-us2"]["api_version"],
+    azure_endpoint = config["Azureopenai-east-us2"]["azure_endpoint"]
 )
 
 #创建 assistant
